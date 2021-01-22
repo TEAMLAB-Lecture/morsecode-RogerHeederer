@@ -143,7 +143,7 @@ class TestMorseCode(unittest.TestCase):
     def decoding_sentence(self, morse_sentence):
         result = []
         for character in morse_sentence.split(" "):
-            if character is not "":
+            if character != "":
                 result.append(self.decoding_character(character))
             else:
                 result.append("-")
@@ -166,3 +166,7 @@ class TestMorseCode(unittest.TestCase):
             "K": "-.-", "X": "-..-", "J": ".---", "W": ".--", "L": ".-..", "Y": "-.--", "M": "--", "Z": "--.."
         }
         return morse_code
+
+
+if __name__=='__main__':
+    unittest.main()
